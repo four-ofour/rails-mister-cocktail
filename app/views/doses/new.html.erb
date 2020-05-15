@@ -1,1 +1,14 @@
-new.html.erb
+<div class="background-show">
+        <div class="card-deck">
+         <div class="card">
+            <div class="card-body">
+              <%= link_to "Home", cocktails_path, class: "btn btn-outline-secondary" %>
+              <%= simple_form_for([@cocktail, @dose]) do |f| %>
+                <%= f.input :description %>
+                <%= f.association :ingredient %>
+                <%= f.submit %>
+              <% end %>
+          </div>
+      </div>
+   </div>
+</div>

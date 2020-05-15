@@ -1,0 +1,18 @@
+<div class="background-show">
+  <div class="card-deck">
+     <div class="card">
+      <div class="card-body">
+        <%= link_to "Home", cocktails_path, class: "btn btn-outline-secondary" %>
+  <p class="card-title"><%= @cocktail.name %></p>
+
+<p class="card-text">
+  <% @cocktail.doses.each do |dose| %>
+  <%= dose.description %>
+  <%= dose.ingredient.name %>
+  <% end %>
+</p>
+  <%= link_to "create new dose", new_cocktail_dose_path(@cocktail) %>
+</div>
+</div>
+</div>
+</div>

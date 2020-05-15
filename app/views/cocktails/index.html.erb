@@ -1,1 +1,22 @@
-hello
+<div class="background">
+  <div class="container">
+    <h1>Good Evening</h1>
+    <h2>Welcome to Her Majesty's Speakeasy</h2>
+    <%= link_to "Home", cocktails_path, class: "btn btn-outline-secondary" %>
+    <%= link_to "Create New Cocktail", new_cocktail_path, class: "btn btn-outline-secondary" %>
+
+<div class="card-deck">
+      <% @cocktails.each do |cocktail| %>
+      <%= link_to cocktail_path(cocktail), class: "card-link-style" do %>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= cocktail.name %></h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+  <% end %>
+<% end %>
+</div>
+</div>
